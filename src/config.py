@@ -41,6 +41,7 @@ class MarkdownAPIConfig:
     It isn't necessary to use this API, you can implement html_to_rst converter by yourself.
     """
     MARKDOWN_API_HOST: str | None = env.str("MARKDOWN_API_HOST", None)
+    MARKDOWN_API_PORT: int | None = env.int("MARKDOWN_API_PORT", None)
     MARKDOWN_API_AUTH: str | None = env.str("MARKDOWN_API_AUTH", None)
 
     @property
@@ -49,7 +50,7 @@ class MarkdownAPIConfig:
 
     @property
     def convert_endpoint(self) -> str:
-        return f'http://{self.MARKDOWN_API_HOST}/convert'
+        return f'http://{self.MARKDOWN_API_HOST}:{self.MARKDOWN_API_PORT}/convert'
 
 
 giga_config = GigaConfig()
