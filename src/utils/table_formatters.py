@@ -29,7 +29,7 @@ async def convert_html_to_list_table(html: str):
         async with session.post(
             url=md_api_conf.convert_endpoint,
             json={"html": html},
-            auth=md_api_conf.auth_token
+            auth=aiohttp.BasicAuth(md_api_conf.auth_token[0],md_api_conf.auth_token[1])
         ) as response:
             response_json = await response.json()
             rst_table_str = response_json['markdown']
