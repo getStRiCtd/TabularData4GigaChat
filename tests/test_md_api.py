@@ -1,6 +1,7 @@
 import asyncio
 from src.utils.table_formatters import convert_html_to_list_table
 
+statement = 'there was no games for the south american championship'
 test_html_table = """
 <table border="1" class="dataframe">
   <thead>
@@ -99,6 +100,7 @@ resulting_list_table = \
      - haroldo , arlindo (2)
      - taça roberto cherry"""
 
-result = asyncio.run(convert_html_to_list_table(test_html_table))
-assert result == resulting_list_table
-print("Test passed!")
+if __name__ == "__main__":
+    result = asyncio.run(convert_html_to_list_table(test_html_table))
+    assert result == resulting_list_table
+    print("Test passed!")
