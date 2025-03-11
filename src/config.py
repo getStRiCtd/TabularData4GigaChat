@@ -1,3 +1,4 @@
+import uuid
 import warnings
 
 from enum import StrEnum
@@ -14,6 +15,11 @@ class GigaScopes(StrEnum):
     PERS = 'GIGACHAT_API_PERS'
     B2B = "GIGACHAT_API_B2B"
     CORP = "GIGACHAT_API_CORP"
+
+class GigaAPI(StrEnum):
+    base_url = "https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
+    chat_url = "https://gigachat.devices.sberbank.ru/api/v1/"
+    embeddings_url = "https://gigachat.devices.sberbank.ru/api/v1/embeddings"
 
 env = Env()
 
@@ -32,6 +38,16 @@ class GigaConfig:
     Dataclass for GigaChat configuration
     """
     GIGACHAT_TOKEN: str = env.str("GIGACHAT_TOKEN")
+    GIGACHAT_MODEL: GigaModels = env.str("GIGACHAT_MODEL")
+    GIGACHAT_SCOPE: GigaScopes = GigaScopes.CORP
+
+    @property
+    def requests_headers(self):
+        return {
+            "Authorization": f"Bearer {self.GIGACHAT_TOKEN}",
+            "RqUID": str(uuid.uuid4()),
+            "Content-Type": "application/x-www-form-urlencoded",
+        }
 
 
 @dataclass(frozen=True)
