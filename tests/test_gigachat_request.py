@@ -1,7 +1,7 @@
 import asyncio
 
 from src.llm.gigachat_class import GigaChat
-from src.llm.prompts import TAB_FACT_SYSTEM_PROMPT
+from src.llm.prompts import TAB_FACT_PROMPT
 
 from tests.test_md_api import test_html_table, statement
 
@@ -19,7 +19,7 @@ async def test(llm: GigaChat, text, prompt):
 
 if __name__ == "__main__":
     giga = GigaChat()
-    prompt = TAB_FACT_SYSTEM_PROMPT
+    prompt = TAB_FACT_PROMPT
     res = asyncio.run(
         test(
             llm=giga,
