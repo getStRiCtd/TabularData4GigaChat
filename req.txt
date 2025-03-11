@@ -2,6 +2,7 @@ annotated-types==0.7.0
 anyio==4.8.0
 certifi==2025.1.31
 charset-normalizer==3.4.1
+environs==14.1.1
 filelock==3.17.0
 fsspec==2025.3.0
 gigachat==0.1.39
@@ -15,6 +16,7 @@ jsonpointer==3.0.0
 langchain-core==0.3.43
 langchain-gigachat==0.3.6
 langsmith==0.3.13
+marshmallow==3.26.1
 numpy==2.2.3
 orjson==3.10.15
 packaging==24.2
@@ -22,6 +24,7 @@ pandas==2.2.3
 pydantic==2.10.6
 pydantic_core==2.27.2
 python-dateutil==2.9.0.post0
+python-dotenv==1.0.1
 pytz==2025.1
 PyYAML==6.0.2
 requests==2.32.3
