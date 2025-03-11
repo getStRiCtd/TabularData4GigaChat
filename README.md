@@ -1,7 +1,7 @@
-# TabularData4LLM
+# TabularData4GigaChat
 **Bench LLMs on TableQA tasks**
 
-The repository is designed to assess the quality of LLM answers in RAG-systems depending on different ways of textual representation of tables.
+The repository is designed to assess the quality of GigaChat table-questions answers depending on different ways of textual representation of tables.
 
 ## Representation formats tested: [^1]
 1. Pure HTML table
