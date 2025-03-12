@@ -18,17 +18,17 @@ The repository is designed to assess the quality of GigaChat table-questions ans
 Accuracy, %
 
 | Format/Model | GigaChat-Lite | GigaChat-Pro | GigaChat-Max |
-|--------------|---------------|--------------|--------------|
-| HTML         | 0.65%         | 0.74%        | -            |
-| reST         | 0.63%         | 0.68%        | -            |
+|--------------|---------------|----------|--------------|
+| HTML         | 65%           | 74%      | -            |
+| reST         | 63%           | 68%      | -            |
 
 ### [WikiTQ](https://huggingface.co/datasets/Stanford/wikitablequestions)
 Accuracy (exact match), %
 
 | Format/Model | GigaChat-Lite | GigaChat-Pro | GigaChat-Max |
 |--------------|---------------|--------------|--------------|
-| HTML         | -             | -            | -            |
-| reST         | -             | -            | -            |
+| HTML         | 25%           | -            | -            |
+| reST         | 23%           | -            | -            |
 
 
 ## Reproduce code
