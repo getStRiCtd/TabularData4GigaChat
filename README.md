@@ -18,9 +18,9 @@ The repository is designed to assess the quality of GigaChat table-questions ans
 Accuracy, %
 
 | Format/Model | GigaChat-Lite | GigaChat-Pro | GigaChat-Max |
-|--------------|---------------|----------|--------------|
-| HTML         | 65%           | 74%      | -            |
-| reST         | 63%           | 68%      | -            |
+|--------------|---------------|----------|-----------|
+| HTML         | 65%           | 74%      | 85.5%     |
+| reST         | 63%           | 68%      | 83%       |
 
 ### [WikiTQ](https://huggingface.co/datasets/Stanford/wikitablequestions)
 Accuracy (exact match), %
